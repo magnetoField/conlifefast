@@ -157,7 +157,7 @@ always @(posedge clk) begin
   end else if (action == ACTION_INIT && !action_init_complete) begin
     board_state[index2] <= rng;
     if (index2 < BOARD_SIZE - 1) begin
-      index2 <= index2 + 2;
+      index2 <= index2 + 1;
     end else  begin
       index2 <= 0;
       action_init_complete <= 1;
